@@ -11,8 +11,8 @@ body {
   :root {
     --squish-animation-time: 300ms;
     --progress-animation-time: 500ms;
-    --circle-animation-time: 350ms;
-    --checkmark-animation-time: 100ms;
+    --circle-animation-time: 300ms;
+    --checkmark-animation-time: 300ms;
     --btn-width: 140px;
     --btn-height: 40px;
   }
@@ -96,7 +96,7 @@ body {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3px;
-    animation: checkmark var(--circle-animation-time) calc(var(--squish-animation-time) + var(--progress-animation-time) + 70ms) forwards;
+    animation: checkmark var(--circle-animation-time) calc(var(--squish-animation-time) + var(--progress-animation-time) + var(--checkmark-animation-time) - 100ms) forwards;
   }
   
   @keyframes squish {
@@ -140,4 +140,46 @@ body {
     100% {
       stroke-dashoffset: 0;
     }
+  }
+
+
+
+  .modal {
+  display: block; /* Changed from none to block */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #00308733;
+  opacity: 0; /* Start fully transparent */
+  visibility: hidden; /* Ensure it's not visible when opacity is 0 */
+  transition: opacity 0.5s, visibility 0.5s; /* Fade effect and make visible */
+
+ 
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
