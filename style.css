@@ -182,3 +182,42 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+
+.gradientgold {
+  background: linear-gradient(135deg,#ffe4a9,#fff0ce, #f3be4a, #f9c961, #f3be4d, #f0ac1b);
+}
+
+.gradientsilver {
+  background: linear-gradient(135deg,#E6E6E6, #CCCCCC, #B3B3B3, #999999, #666666, #333333);
+}
+
+.gradientbronze {
+  background: linear-gradient(135deg, #f5b26b, #d77b19, #c67117, #d97c19, #ff8300, #ff9c00);
+}
+
+.gradient {
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+    border-radius: 40px;
+    align-content: space-between;
+    background-size: 120px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradient 4s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+.badges {
+ display: flex; 
+ position: relative;
+ width: 300px;
+ align-content: space-between;
+ 
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
